@@ -30,11 +30,12 @@
     <version>6.2</version>
   </parent>
   <groupId>org.xwiki.contrib.authentication</groupId>
-  <artifactId>xwiki-authentication-headers</artifactId>
-  <name>XWiki Authenticator Headers</name>
-  <version>2.1-SNAPSHOT</version>
+  <artifactId>xwiki-authenticator-headers</artifactId>
+  <name>Headers Authenticator for XWiki</name>
+  <version>2.0.1-SNAPSHOT</version>
   <description>XWiki authentication based on HTTP headers</description>
   <properties>
+    <xwiki.extension.features>xwiki-authentication-headers</xwiki.extension.features>
     <platform.version>${project.parent.version}</platform.version>
     <rendering.version>${platform.version}</rendering.version>
   </properties>
@@ -78,6 +79,7 @@
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
