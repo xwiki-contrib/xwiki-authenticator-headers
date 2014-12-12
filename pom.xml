@@ -32,7 +32,7 @@
   <groupId>org.xwiki.contrib.authentication</groupId>
   <artifactId>xwiki-authenticator-headers</artifactId>
   <name>Headers Authenticator for XWiki</name>
-  <version>2.0.1-SNAPSHOT</version>
+  <version>2.0.1</version>
   <description>XWiki authentication based on HTTP headers</description>
   <properties>
     <xwiki.extension.features>xwiki-authentication-headers</xwiki.extension.features>
@@ -113,7 +113,7 @@
     <connection>scm:git:git://github.com/xwiki-contrib/xwiki-authenticator-headers.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/xwiki-authenticator-headers.git</developerConnection>
     <url>https://github.com/xwiki-contrib/xwiki-authenticator-headers</url>
-    <tag>HEAD</tag>
+    <tag>xwiki-authenticator-headers-2.0.1</tag>
   </scm>
   <distributionManagement>
     <repository>
