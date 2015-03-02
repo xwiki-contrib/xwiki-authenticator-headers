@@ -251,10 +251,10 @@ public class XWikiHeadersAuthenticator extends XWikiAuthServiceImpl
      */
     private void synchronizeUser(DocumentReference user, XWikiContext context) throws XWikiException
     {
-        String database = context.getWikiId();
+        String database = context.getDatabase();
         try {
             // Switch to main wiki to force users to be global users
-            context.setWikiId(user.getWikiReference().getName());
+            context.setDatabase(user.getWikiReference().getName());
 
             // test if user already exists
             if (!context.getWiki().exists(user, context)) {
@@ -263,7 +263,7 @@ public class XWikiHeadersAuthenticator extends XWikiAuthServiceImpl
 
             synchronizeGroups(user, context);
         } finally {
-            context.setWikiId(database);
+            context.setDatabase(database);
         }
     }
 
