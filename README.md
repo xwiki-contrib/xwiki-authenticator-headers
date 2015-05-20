@@ -2,17 +2,17 @@ Provides XWiki authentication by trusting HTTP Headers and getting information a
 
 # This authenticator execute the following process
 
- 1. Check that the _auth_field_ contains a value
-    1. get the UserID from the _id_field_ and convert it as described in the configuration.
+ 1. Check that the `auth_field` contains a value
+    1. Get the UserID from the `id_field` and convert it as described in the configuration.
     2. If this is a new session, or the current user in session is not the actual user:
        1. If the user does not exists
           1. Create a new user
-          2. Map all field described in _field_mapping_ into user's properties of that user
-       2. If _group_mapping_ is defined, synchronize the membership of that user to match groups provided.
-          1. Add user to group provided in the _group_field_ header (as needed)
-          2. Remove it from all mapped group not provided in the _group_field_ header (as needed)
+          2. Map all field described in `field_mapping` into user's properties of that user
+       2. If `group_mapping` is defined, synchronize the membership of that user to match groups provided.
+          1. Add user to group provided in the `group_field` header (as needed)
+          2. Remove it from all mapped group not provided in the `group_field` header (as needed)
     3. The user is authenticated and memorize for the current session.
- 2. If no remote user ( _auth_field_ ) is provided, fallback to standard XWiki authentication.
+ 2. If no remote user (`auth_field`) is provided, fallback to standard XWiki authentication.
 
 # Configuration
 
@@ -55,8 +55,9 @@ Provides XWiki authentication by trusting HTTP Headers and getting information a
 
 # Install
 
-* copy this authenticator jar file into WEB_INF/lib/
-* setup xwiki.cfg with: xwiki.authentication.authclass=com.xwiki.authentication.headers.XWikiHeadersAuthenticator
+* build with `mvn install`
+* copy this authenticator jar file from `target` into `WEB_INF/lib/`
+* setup `xwiki.cfg` with: `xwiki.authentication.authclass=com.xwiki.authentication.headers.XWikiHeadersAuthenticator`
 
 # Troubleshoot
 
